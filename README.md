@@ -112,9 +112,9 @@ Curs 2006-2007 - Composite](http://ima.udg.edu/~sellares/EINF-ES1/CompositeToni.
 [_ISubject_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_subject.js), [_IProxy_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_proxy.js), Refer to [Enginyeria del Software I -
 Curs 2006-2007 - Proxy](http://ima.udg.edu/~sellares/EINF-ES1/ProxyToni.pdf) for a detailed description.   
 
-
-[comment]: <> -------------------- Developer's Guide --------------------
-
+{::nomarkdown}
+<!-- > -------------------- Developer's Guide -------------------- ->
+{:/}
 # Developer's Guide
 
 ## How to implement a Design Pattern
