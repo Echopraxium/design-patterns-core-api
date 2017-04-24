@@ -113,8 +113,11 @@ Curs 2006-2007 - Composite](http://ima.udg.edu/~sellares/EINF-ES1/CompositeToni.
 Curs 2006-2007 - Proxy](http://ima.udg.edu/~sellares/EINF-ES1/ProxyToni.pdf) for a detailed description.   
 
 {::nomarkdown}
-<!-- > -------------------- Developer's Guide -------------------- ->
+
+<!-- -------------------- Developer's Guide -------------------- ->
+
 {:/}
+
 # Developer's Guide
 
 ## How to implement a Design Pattern
