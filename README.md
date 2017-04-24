@@ -25,7 +25,8 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 >What is the purpose of `xxx_id` arguments ? This is a design choice motivated by 2 design intents. The first is when the service call is  propagated (e.g. 'request_id' argument is propagated by _Adapter_ when `IAdapter.request()` calls `IAdaptee.specificRequest()`). The second is to avoid _counterproductive class proliferation_ by using `xxx_id` argument as a way to make the call more specific (e.g. 'request_id' argument when calling `IHandler.handleRequest()` within the _Chain Of Responsability_ pattern)
 
 
-[//]: <> -------------------- Creational patterns --------------------
+[comment]: <> -------------------- Creational patterns --------------------
+
 # Creational patterns
 
 ### Abstract Factory
@@ -44,7 +45,8 @@ Curs 2006-2007 - Factory Method](http://ima.udg.edu/~sellares/EINF-ES1/FactoryTo
 Curs 2006-2007 - Singleton](http://ima.udg.edu/~sellares/EINF-ES1/SingletonToni.pdf) for a detailed description.  
 
 
-[//]: <> -------------------- Behavioral patterns --------------------
+[comment]: <> -------------------- Behavioral patterns --------------------
+
 # Behavioral patterns
 
 ### Observer
@@ -83,7 +85,8 @@ Curs 2006-2007 - Template Method](http://ima.udg.edu/~sellares/EINF-ES1/Template
 Curs 2006-2007 - Mediator](http://ima.udg.edu/~sellares/EINF-ES1/MediatorToni.pdf) for a detailed description.    
 
 
-[//]: <> -------------------- Structural patterns --------------------
+[comment]: <> -------------------- Structural patterns --------------------
+
 # Structural patterns
 
 ### Bridge
@@ -110,7 +113,8 @@ Curs 2006-2007 - Composite](http://ima.udg.edu/~sellares/EINF-ES1/CompositeToni.
 Curs 2006-2007 - Proxy](http://ima.udg.edu/~sellares/EINF-ES1/ProxyToni.pdf) for a detailed description.   
 
 
-[//]: <> -------------------- Developer's Guide --------------------
+[comment]: <> -------------------- Developer's Guide --------------------
+
 # Developer's Guide
 
 ## How to implement a Design Pattern
