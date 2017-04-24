@@ -8,7 +8,7 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 
 >There are many online documents about _Design Patterns_. An important part of this project was to mine them and propose for each pattern the 'least worst' design (from my perspective). My proposals should just be considered as an ongoing work (for which your feedback is welcome) and certainly not a reference. Thus I advise you to check and evaluate by yourself these  documents (I have gathered them in _References_ paragraph) to check it they fits your learning curve and design issues.
 
-## Changelog for Release 0.0.2
+## Changelog for Release 0.0.7
 * Package extraction: original ("Gang of Four") patterns extracted from [design-patterns-api](https://www.npmjs.com/package/design-patterns-api) in order to leave room for further patterns (e.g. _Multiton_, _Service Location_, _Intercepting Filter_...)
 * New pattern released: _Proxy_
 * Design Issue: name 'Subject' for a participant is used both in 'Observer' and Proxy' pattern
@@ -25,7 +25,6 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 >What is the purpose of `xxx_id` arguments ? This is a design choice motivated by 2 design intents. The first is when the service call is  propagated (e.g. 'request_id' argument is propagated by _Adapter_ when `IAdapter.request()` calls `IAdaptee.specificRequest()`). The second is to avoid _counterproductive class proliferation_ by using `xxx_id` argument as a way to make the call more specific (e.g. 'request_id' argument when calling `IHandler.handleRequest()` within the _Chain Of Responsability_ pattern)
 
 
-[comment]: <> -------------------- Creational patterns --------------------
 
 # Creational patterns
 
@@ -45,7 +44,6 @@ Curs 2006-2007 - Factory Method](http://ima.udg.edu/~sellares/EINF-ES1/FactoryTo
 Curs 2006-2007 - Singleton](http://ima.udg.edu/~sellares/EINF-ES1/SingletonToni.pdf) for a detailed description.  
 
 
-[comment]: <> -------------------- Behavioral patterns --------------------
 
 # Behavioral patterns
 
@@ -85,7 +83,6 @@ Curs 2006-2007 - Template Method](http://ima.udg.edu/~sellares/EINF-ES1/Template
 Curs 2006-2007 - Mediator](http://ima.udg.edu/~sellares/EINF-ES1/MediatorToni.pdf) for a detailed description.    
 
 
-[comment]: <> -------------------- Structural patterns --------------------
 
 # Structural patterns
 
@@ -112,11 +109,6 @@ Curs 2006-2007 - Composite](http://ima.udg.edu/~sellares/EINF-ES1/CompositeToni.
 [_ISubject_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_subject.js), [_IProxy_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_proxy.js), Refer to [Enginyeria del Software I -
 Curs 2006-2007 - Proxy](http://ima.udg.edu/~sellares/EINF-ES1/ProxyToni.pdf) for a detailed description.   
 
-{::nomarkdown}
-
-<!-- -------------------- Developer's Guide -------------------- ->
-
-{:/}
 
 # Developer's Guide
 
