@@ -8,12 +8,12 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 
 >There are many online documents about _Design Patterns_. An important part of this project was to mine them and propose for each pattern the 'least worst' design (from my perspective). My proposals should just be considered as an ongoing work (for which your feedback is welcome) and certainly not a reference. Thus I advise you to check and evaluate by yourself these  documents (I have gathered them in _References_ paragraph) to check it they fits your learning curve and design issues.
 
-### Changelog for Release 0.0.8
+### Changelog for Release 0.0.10
 * Package extraction: original ("Gang of Four") patterns extracted from [design-patterns-api](https://www.npmjs.com/package/design-patterns-api) in order to leave room for further patterns (e.g. _Multiton_, _Service Location_, _Intercepting Filter_...)
 * New pattern released: _Proxy_
 * Design Issue: name 'Subject' for a participant is used both in 'Observer' and Proxy' pattern
 * Design Fix: rename 'Subject' to 'Observable' thus releasing 'Subject' for 'Proxy' pattern. 'ISubject' also becomes superclass of 'IAdapter'
-* Minor documentation fix: (link to documentation link in 'Singleton' pattern)
+* Minor documentation fix: link to documentation in 'Singleton' pattern
 
 ### Roadmap
 * UML class diagrams and implementation sample for each pattern
@@ -31,86 +31,91 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 
 ### Abstract Factory
 [_IAbstractFactory_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_abstract_factory.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_product.js).  
-Refer to [Enginyeria del Software I - Curs 2006-2007 - Abstract Factory](http://ima.udg.edu/~sellares/EINF-ES1/AbstractFactoryToni.pdf) for a detailed description.  
-
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Abstract Factory](http://ima.udg.edu/~sellares/EINF-ES1/AbstractFactoryToni.pdf).  
 
 ### Factory Method
 [_I_Creator_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_creator.js), [IProduct](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_product.js).  
-Refer to [Enginyeria del Software I - Curs 2006-2007 - Factory Method](http://ima.udg.edu/~sellares/EINF-ES1/FactoryToni.pdf) for a detailed description.  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Factory Method](http://ima.udg.edu/~sellares/EINF-ES1/FactoryToni.pdf).  
 
 ### Builder
 [_IBuilder_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_builder.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_product.js).  
-Refer to [BlackWasp - Builder design pattern](http://www.blackwasp.co.uk/Builder.aspx) for a detailed description.       
+Detailed description: [BlackWasp - Builder design pattern](http://www.blackwasp.co.uk/Builder.aspx).       
 
 ### Singleton
 [_MxI.$ISingleton_](https://github.com/Echopraxium/mixin-interface-api/blob/master/README.md#singleton-feature).  
-Refer to [Enginyeria del Software I - Curs 2006-2007 - Singleton](http://ima.udg.edu/~sellares/EINF-ES1/SingletonToni.pdf) for a detailed description.  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Singleton](http://ima.udg.edu/~sellares/EINF-ES1/SingletonToni.pdf).  
 
 
 
 # Behavioral patterns
 
 ### Observer
-[_IObserver_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_observer.js) and [_IObservable_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_observable.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Observer](http://ima.udg.edu/~sellares/EINF-ES1/ObserverToni.pdf) for a detailed description.    
+[_IObserver_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_observer.js) and [_IObservable_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_observable.js).  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Observer](http://ima.udg.edu/~sellares/EINF-ES1/ObserverToni.pdf).    
 
 ### Iterator
-[_IIterator_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_iterator.js), [_ICollection_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_collection.js). Refer to [Tutorials Point - Design Patterns: Iterator pattern](https://www.tutorialspoint.com/design_pattern/iterator_pattern.htm) for a detailed description.    
+[_IIterator_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_iterator.js), [_ICollection_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_collection.js).  
+Detailed description: [Tutorials Point - Design Patterns: Iterator pattern](https://www.tutorialspoint.com/design_pattern/iterator_pattern.htm).    
 
 ### State
-[_IState_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_state.js), [_IStateContext_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_state_context.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - State](http://ima.udg.edu/~sellares/EINF-ES1/StateToni.pdf) for a detailed description.  
+[_IState_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_state.js), [_IStateContext_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_state_context.js).  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - State](http://ima.udg.edu/~sellares/EINF-ES1/StateToni.pdf).  
 
 ### Chain of Responsability
-[_IHandler_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_handler.js), [_IRequest_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_request.js). Refer to [OOODesign - Chain of Responsability](http://www.oodesign.com/chain-of-responsibility-pattern.html) for a detailed description.  
+[_IHandler_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_handler.js), [_IRequest_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_request.js).  
+Detailed description: [OOODesign - Chain of Responsability](http://www.oodesign.com/chain-of-responsibility-pattern.html).  
 
 ### Visitor
-[_IVisitor_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_visitor.js), [_IElement_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_element.js). Refer to [Tutorials Point - Design Patterns: Visitor pattern](https://www.tutorialspoint.com/design_pattern/visitor_pattern.htm) for a detailed description.  
+[_IVisitor_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_visitor.js), [_IElement_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_element.js).  
+Detailed description: [Tutorials Point - Design Patterns: Visitor pattern](https://www.tutorialspoint.com/design_pattern/visitor_pattern.htm).  
 
 ### Memento
-[_IMemento_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_memento.js), [_IOriginator_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_originator.js), [_ICareTaker_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_care_taker.js). Refer to [Tutorials Point - Design Patterns: Memento pattern](https://www.tutorialspoint.com/design_pattern/memento_pattern.htm) for a detailed description.   
+[_IMemento_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_memento.js), [_IOriginator_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_originator.js), [_ICareTaker_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_care_taker.js).  
+Detailed description: [Tutorials Point - Design Patterns: Memento pattern](https://www.tutorialspoint.com/design_pattern/memento_pattern.htm).   
 
 ### Strategy
-[_IStrategy_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_strategy.js), [_IStrategyContext_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_strategy_context.js). Refer to [Tutorials Point - Design Patterns: Strategy pattern](https://www.tutorialspoint.com/design_pattern/strategy_pattern.htm) for a detailed description.
+[_IStrategy_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_strategy.js), [_IStrategyContext_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_strategy_context.js).  
+Detailed description: [Tutorials Point - Design Patterns: Strategy pattern](https://www.tutorialspoint.com/design_pattern/strategy_pattern.htm).
 
 ### Command
-[_ICommand_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_command.js), [_IInvoker_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_invoker.js), [_IReceiver_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_receiver.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Command](http://ima.udg.edu/~sellares/EINF-ES1/CommandToni.pdf) for a detailed description.    
+[_ICommand_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_command.js), [_IInvoker_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_invoker.js), [_IReceiver_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_receiver.js).  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Command](http://ima.udg.edu/~sellares/EINF-ES1/CommandToni.pdf).    
 
 ### Template Method
-[_ITemplateMethod_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_template_method.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Template Method](http://ima.udg.edu/~sellares/EINF-ES1/TemplateMethodToni.pdf) for a detailed description.    
+[_ITemplateMethod_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/behavioral/i_template_method.js).  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Template Method](http://ima.udg.edu/~sellares/EINF-ES1/TemplateMethodToni.pdf).    
 
 ### Mediator
-[_IMediator_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_mediator.js), [_IColleague_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_colleague.js), [_IRequest_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_request.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Mediator](http://ima.udg.edu/~sellares/EINF-ES1/MediatorToni.pdf) for a detailed description.    
+[_IMediator_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_mediator.js), [_IColleague_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_colleague.js), [_IRequest_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_request.js).  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Mediator](http://ima.udg.edu/~sellares/EINF-ES1/MediatorToni.pdf).    
 
 
 
 # Structural patterns
 
 ### Bridge
-[_IImplementor_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_implementor.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Bridge](http://ima.udg.edu/~sellares/EINF-ES1/BridgeToni.pdf) for a detailed description.  
+[_IImplementor_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_implementor.js).  
+Refer to [Enginyeria del Software I - Curs 2006-2007 - Bridge](http://ima.udg.edu/~sellares/EINF-ES1/BridgeToni.pdf).  
 
 ### Adapter
-[_IAdapter_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_adapter.js), [_IAdaptee_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_adaptee.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Adapter](http://ima.udg.edu/~sellares/EINF-ES1/AdapterToni.pdf) for a detailed description.      
+[_IAdapter_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_adapter.js), [_IAdaptee_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_adaptee.js).  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Adapter](http://ima.udg.edu/~sellares/EINF-ES1/AdapterToni.pdf).      
 
 ### Facade
-[_IFacade_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_facade.js). Refer to [Tutorials Point - Design Patterns: Memento pattern](https://www.tutorialspoint.com/design_pattern/facade_pattern.htm) for a detailed description.     
+[_IFacade_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_facade.js).  
+Detailed description: [Tutorials Point - Design Patterns: Memento pattern](https://www.tutorialspoint.com/design_pattern/facade_pattern.htm).     
 
 ### Decorator
-[_IDecorator_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_decorator.js), [_ICoreComponent_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_core_component.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Decorator](http://ima.udg.edu/~sellares/EINF-ES1/DecoratorToni.pdf) for a detailed description.   
+[_IDecorator_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_decorator.js), [_ICoreComponent_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_core_component.js).  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Decorator](http://ima.udg.edu/~sellares/EINF-ES1/DecoratorToni.pdf).   
 
 ### Composite
-[_IComponent_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_component.js), [_IComposite_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_decorator.js), [_ILeaf_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_leaf.js), Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Composite](http://ima.udg.edu/~sellares/EINF-ES1/CompositeToni.pdf) for a detailed description. 
+[_IComponent_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_component.js), [_IComposite_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_decorator.js), [_ILeaf_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_leaf.js).  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Composite](http://ima.udg.edu/~sellares/EINF-ES1/CompositeToni.pdf). 
 
 ### Proxy (new)
-[_ISubject_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_subject.js), [_IProxy_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_proxy.js), Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Proxy](http://ima.udg.edu/~sellares/EINF-ES1/ProxyToni.pdf) for a detailed description.   
+[_ISubject_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_subject.js), [_IProxy_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/structural/i_proxy.js).  
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Proxy](http://ima.udg.edu/~sellares/EINF-ES1/ProxyToni.pdf).   
 
 
 # Developer's Guide
