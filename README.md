@@ -8,7 +8,7 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 
 >There are many online documents about _Design Patterns_. An important part of this project was to mine them and propose for each pattern the 'least worst' design (from my perspective). My proposals should just be considered as an ongoing work (for which your feedback is welcome) and certainly not a reference. Thus I advise you to check and evaluate by yourself these  documents (I have gathered them in _References_ paragraph) to check it they fits your learning curve and design issues.
 
-### Changelog for Release 0.0.11
+### Changelog for Release 0.0.12
 * Package extraction: original ("Gang of Four") patterns extracted from [design-patterns-api](https://www.npmjs.com/package/design-patterns-api) in order to leave room for further patterns (e.g. _Multiton_, _Service Location_, _Intercepting Filter_...)
 * New pattern released: _Proxy_
 * Design Issue: name 'Subject' for a participant is used both in 'Observer' and Proxy' pattern
@@ -19,108 +19,106 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 * UML class diagrams and implementation sample for each pattern
 
 ### Preliminary notes
->Naming convention: for any given interface class, its name is written with _PascalCase_ convention (e.g. `IAbstractFactory`) and its source code uses _snake_case_ convention (e.g. `i_abstract_factory.js`)
+>*Naming convention:* for any given interface class, its name is written with _PascalCase_ convention (e.g. `IAbstractFactory`) and its source code uses _snake_case_ convention (e.g. `i_abstract_factory.js`)
 
->Why `...args` ? Thanks to the _rest parameter_ feature of javascript es6 (`...args`), most interface services accept optional and variable number of arguments.
+>*Why `...args` ?* Thanks to the _rest parameter_ feature of javascript es6 (`...args`), most interface services accept optional and variable number of arguments.
 
->What is the purpose of `xxx_id` arguments ? This is a design choice motivated by 2 design intents. The first is when the service call is  propagated (e.g. 'request_id' argument is propagated by _Adapter_ when `IAdapter.request()` calls `IAdaptee.specificRequest()`). The second is to avoid _counterproductive class proliferation_ by using `xxx_id` argument as a way to make the call more specific (e.g. 'request_id' argument when calling `IHandler.handleRequest()` within the _Chain Of Responsability_ pattern)
+>*What is the purpose of `xxx_id` arguments ?* This is a design choice motivated by 2 design intents. The first is when the service call is  propagated (e.g. 'request_id' argument is propagated by _Adapter_ when `IAdapter.request()` calls `IAdaptee.specificRequest()`). The second is to avoid _counterproductive class proliferation_ by using `xxx_id` argument as a way to make the call more specific (e.g. 'request_id' argument when calling `IHandler.handleRequest()` within the _Chain Of Responsability_ pattern)
 
 
 
-# Creational patterns
+## Creational patterns
 
 ### Abstract Factory
-[_IAbstractFactory_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_abstract_factory.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_product.js).  
+Interface classes: [_IAbstractFactory_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_abstract_factory.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_product.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Abstract Factory](http://ima.udg.edu/~sellares/EINF-ES1/AbstractFactoryToni.pdf).  
 
 ### Factory Method
-[_I_Creator_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_creator.js), [IProduct](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_product.js).  
+Interface classes: [_I_Creator_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_creator.js), [IProduct](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_product.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Factory Method](http://ima.udg.edu/~sellares/EINF-ES1/FactoryToni.pdf).  
 
 ### Builder
-[_IBuilder_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_builder.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_product.js).  
+Interface classes: [_IBuilder_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_builder.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_product.js).  
 Detailed description: [BlackWasp - Builder design pattern](http://www.blackwasp.co.uk/Builder.aspx).       
 
 ### Singleton
-[_MxI.$ISingleton_](https://github.com/Echopraxium/mixin-interface-api/blob/master/README.md#singleton-feature).  
+Interface classes: [_MxI.$ISingleton_](https://github.com/Echopraxium/mixin-interface-api/blob/master/README.md#singleton-feature).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Singleton](http://ima.udg.edu/~sellares/EINF-ES1/SingletonToni.pdf).  
 
 
 
-# Behavioral patterns
+## Behavioral patterns
 
 ### Observer
-[_IObserver_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_observer.js) and [_IObservable_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_observable.js).  
+Interface classes: [_IObserver_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_observer.js) and [_IObservable_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_observable.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Observer](http://ima.udg.edu/~sellares/EINF-ES1/ObserverToni.pdf).    
 
 ### Iterator
-[_IIterator_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_iterator.js), [_ICollection_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_collection.js).  
+Interface classes: [_IIterator_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_iterator.js), [_ICollection_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_collection.js).  
 Detailed description: [Tutorials Point - Design Patterns: Iterator pattern](https://www.tutorialspoint.com/design_pattern/iterator_pattern.htm).    
 
 ### State
-[_IState_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_state.js), [_IStateContext_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_state_context.js).  
+Interface classes: [_IState_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_state.js), [_IStateContext_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_state_context.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - State](http://ima.udg.edu/~sellares/EINF-ES1/StateToni.pdf).  
 
 ### Chain of Responsability
-[_IHandler_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_handler.js), [_IRequest_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_request.js).  
+Interface classes: [_IHandler_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_handler.js), [_IRequest_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_request.js).  
 Detailed description: [OOODesign - Chain of Responsability](http://www.oodesign.com/chain-of-responsibility-pattern.html).  
 
 ### Visitor
-[_IVisitor_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_visitor.js), [_IElement_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_element.js).  
+Interface classes: [_IVisitor_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_visitor.js), [_IElement_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_element.js).  
 Detailed description: [Tutorials Point - Design Patterns: Visitor pattern](https://www.tutorialspoint.com/design_pattern/visitor_pattern.htm).  
 
 ### Memento
-[_IMemento_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_memento.js), [_IOriginator_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_originator.js), [_ICareTaker_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_care_taker.js).  
+Interface classes: [_IMemento_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_memento.js), [_IOriginator_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_originator.js), [_ICareTaker_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_care_taker.js).  
 Detailed description: [Tutorials Point - Design Patterns: Memento pattern](https://www.tutorialspoint.com/design_pattern/memento_pattern.htm).   
 
 ### Strategy
-[_IStrategy_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_strategy.js), [_IStrategyContext_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_strategy_context.js).  
+Interface classes: [_IStrategy_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_strategy.js), [_IStrategyContext_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_strategy_context.js).  
 Detailed description: [Tutorials Point - Design Patterns: Strategy pattern](https://www.tutorialspoint.com/design_pattern/strategy_pattern.htm).
 
 ### Command
-[_ICommand_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_command.js), [_IInvoker_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_invoker.js), [_IReceiver_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_receiver.js).  
+Interface classes: [_ICommand_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_command.js), [_IInvoker_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_invoker.js), [_IReceiver_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_receiver.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Command](http://ima.udg.edu/~sellares/EINF-ES1/CommandToni.pdf).    
 
 ### Template Method
-[_ITemplateMethod_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_template_method.js).  
+Interface classes: [_ITemplateMethod_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_template_method.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Template Method](http://ima.udg.edu/~sellares/EINF-ES1/TemplateMethodToni.pdf).    
 
 ### Mediator
-[_IMediator_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_mediator.js), [_IColleague_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_colleague.js), [_IRequest_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_request.js).  
+Interface classes: [_IMediator_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_mediator.js), [_IColleague_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_colleague.js), [_IRequest_](https://github.com/Echopraxium/mixin-interface-api/blob/master/src/behavioral/i_request.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Mediator](http://ima.udg.edu/~sellares/EINF-ES1/MediatorToni.pdf).    
 
-
-
-# Structural patterns
+## Structural patterns
 
 ### Bridge
-[_IImplementor_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_implementor.js).  
+Interface classes: [_IImplementor_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_implementor.js).  
 Refer to [Enginyeria del Software I - Curs 2006-2007 - Bridge](http://ima.udg.edu/~sellares/EINF-ES1/BridgeToni.pdf).  
 
 ### Adapter
-[_IAdapter_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_adapter.js), [_IAdaptee_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_adaptee.js).  
+Interface classes: [_IAdapter_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_adapter.js), [_IAdaptee_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_adaptee.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Adapter](http://ima.udg.edu/~sellares/EINF-ES1/AdapterToni.pdf).      
 
 ### Facade
-[_IFacade_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_facade.js).  
+Interface classes: [_IFacade_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_facade.js).  
 Detailed description: [Tutorials Point - Design Patterns: Memento pattern](https://www.tutorialspoint.com/design_pattern/facade_pattern.htm).     
 
 ### Decorator
-[_IDecorator_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_decorator.js), [_ICoreComponent_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_core_component.js).  
+Interface classes: [_IDecorator_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_decorator.js), [_ICoreComponent_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_core_component.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Decorator](http://ima.udg.edu/~sellares/EINF-ES1/DecoratorToni.pdf).   
 
 ### Composite
-[_IComponent_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_component.js), [_IComposite_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_decorator.js), [_ILeaf_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_leaf.js).  
+Interface classes: [_IComponent_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_component.js), [_IComposite_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_decorator.js), [_ILeaf_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_leaf.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Composite](http://ima.udg.edu/~sellares/EINF-ES1/CompositeToni.pdf). 
 
 ### Proxy (new)
-[_ISubject_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_subject.js), [_IProxy_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_proxy.js).  
+Interface classes: [_ISubject_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_subject.js), [_IProxy_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_proxy.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Proxy](http://ima.udg.edu/~sellares/EINF-ES1/ProxyToni.pdf).   
 
 
-# Developer's Guide
+## Developer's Guide
 
-## How to implement a Design Pattern
+### How to implement a Design Pattern
 A given _Design Pattern_ is composed of one or more _participants_, this is very much like _Role(s)_ in a play. Within `design-patterns-api` project, each participant is implemented as an _interface classs_. Thus, in order to _implement a Design Pattern_ you must implement the _interface class(es)_. Please refer to [How to code an Implementation class](https://github.com/Echopraxium/mixin-interface-api/blob/master/README.md#how-to-code-an-implementation-class) in the documentation of `mixin-interface-api` package.
 
 
