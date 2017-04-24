@@ -8,7 +8,7 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 
 >There are many online documents about _Design Patterns_. An important part of this project was to mine them and propose for each pattern the 'least worst' design (from my perspective). My proposals should just be considered as an ongoing work (for which your feedback is welcome) and certainly not a reference. Thus I advise you to check and evaluate by yourself these  documents (I have gathered them in _References_ paragraph) to check it they fits your learning curve and design issues.
 
-### Changelog for Release 0.0.12
+### Changelog for Release 0.0.13
 * Package extraction: original ("Gang of Four") patterns extracted from [design-patterns-api](https://www.npmjs.com/package/design-patterns-api) in order to leave room for further patterns (e.g. _Multiton_, _Service Location_, _Intercepting Filter_...)
 * New pattern released: _Proxy_
 * Design Issue: name 'Subject' for a participant is used both in 'Observer' and Proxy' pattern
@@ -19,11 +19,11 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 * UML class diagrams and implementation sample for each pattern
 
 ### Preliminary notes
->*Naming convention:* for any given interface class, its name is written with _PascalCase_ convention (e.g. `IAbstractFactory`) and its source code uses _snake_case_ convention (e.g. `i_abstract_factory.js`)
+>**Naming convention:** for any given interface class, its name is written with _PascalCase_ convention (e.g. `IAbstractFactory`) and its source code uses _snake_case_ convention (e.g. `i_abstract_factory.js`)
 
->*Why `...args` ?* Thanks to the _rest parameter_ feature of javascript es6 (`...args`), most interface services accept optional and variable number of arguments.
+>**Why `...args` ?** Thanks to the _rest parameter_ feature of javascript es6 (`...args`), most interface services accept optional and variable number of arguments.
 
->*What is the purpose of `xxx_id` arguments ?* This is a design choice motivated by 2 design intents. The first is when the service call is  propagated (e.g. 'request_id' argument is propagated by _Adapter_ when `IAdapter.request()` calls `IAdaptee.specificRequest()`). The second is to avoid _counterproductive class proliferation_ by using `xxx_id` argument as a way to make the call more specific (e.g. 'request_id' argument when calling `IHandler.handleRequest()` within the _Chain Of Responsability_ pattern)
+>**What is the purpose of `xxx_id` arguments ?** This is a design choice motivated by 2 design intents. The first is when the service call is  propagated (e.g. 'request_id' argument is propagated by _Adapter_ when `IAdapter.request()` calls `IAdaptee.specificRequest()`). The second is to avoid _counterproductive class proliferation_ by using `xxx_id` argument as a way to make the call more specific (e.g. 'request_id' argument when calling `IHandler.handleRequest()` within the _Chain Of Responsability_ pattern)
 
 
 
