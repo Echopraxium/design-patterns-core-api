@@ -11,10 +11,10 @@
     "url": "git+https://github.com/Echopraxium/design-patterns-core-api.git"
   },
   "keywords": [
-    "Design_Patterns",
-    "Gang_Of_Four_",
+    "Design Patterns",
+    "Gang of Four",
     "GoF",
-    "Interface_Class",
+    "Interface class",
     "API"
   ],
   "author": "Michel Kern",
