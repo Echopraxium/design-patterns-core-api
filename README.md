@@ -4,7 +4,7 @@ Implementation of the original ("Gang Of Four") [_Design Patterns_](https://en.w
 
 >Your feedback (via github) is welcome especially to report bugs or design issues, request for features or enhancements and contribute to the 'religious' aspects of this project, like which patterns are in fact _Antipatterns_ or if it depends on the context (e.g. _Singleton_, _Service Locator_...).
 
-ATM this framework provides 20 out of the 23 'Original Patterns' described by the _Gang of Four_ in their 1995's book (_Elements of Reusable Object-Oriented Software_). There are further design patterns described later (e.g. _Patterns of Enterprise Architecture Application_ wrtiien by Martin Fowler)
+ATM this framework provides 20 out of the 23 'Original Patterns' described by the _Gang of Four_ in their 1995's book (_Elements of Reusable Object-Oriented Software_). There are further design patterns described later (e.g. _Patterns of Enterprise Architecture Application_ written by Martin Fowler)
 
 >There are many online documents about _Design Patterns_. An important part of this project was to mine them and propose for each pattern the 'least worst' design (from my perspective). My proposals should just be considered as an ongoing work (for which your feedback is welcome) and certainly not a reference. Thus I advise you to check and evaluate by yourself these  documents (I have gathered them in _References_ paragraph) to check it they fits your learning curve and design issues.
 
@@ -30,19 +30,21 @@ ATM this framework provides 20 out of the 23 'Original Patterns' described by th
 # Creational patterns
 
 ### Abstract Factory
-[_IAbstractFactory_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_abstract_factory.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_product.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Abstract Factory](http://ima.udg.edu/~sellares/EINF-ES1/AbstractFactoryToni.pdf) for a detailed description.  
+[_IAbstractFactory_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_abstract_factory.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_product.js).  
+Refer to [Enginyeria del Software I - Curs 2006-2007 - Abstract Factory](http://ima.udg.edu/~sellares/EINF-ES1/AbstractFactoryToni.pdf) for a detailed description.  
+
 
 ### Factory Method
-[_I_Creator_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_creator.js), [IProduct](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_product.js). Refer to [Enginyeria del Software I -
-Curs 2006-2007 - Factory Method](http://ima.udg.edu/~sellares/EINF-ES1/FactoryToni.pdf) for a detailed description.  
+[_I_Creator_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_creator.js), [IProduct](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_product.js).  
+Refer to [Enginyeria del Software I - Curs 2006-2007 - Factory Method](http://ima.udg.edu/~sellares/EINF-ES1/FactoryToni.pdf) for a detailed description.  
 
 ### Builder
-[_IBuilder_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_builder.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_product.js). Refer to [BlackWasp - Builder design pattern](http://www.blackwasp.co.uk/Builder.aspx) for a detailed description.       
+[_IBuilder_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_builder.js), [_IProduct_](https://github.com/Echopraxium/design-patterns-api/blob/master/src/creational/i_product.js).  
+Refer to [BlackWasp - Builder design pattern](http://www.blackwasp.co.uk/Builder.aspx) for a detailed description.       
 
 ### Singleton
-[_MxI.$ISingleton_](https://github.com/Echopraxium/mixin-interface-api/blob/master/README.md#singleton-feature). refer to [Enginyeria del Software I -
-Curs 2006-2007 - Singleton](http://ima.udg.edu/~sellares/EINF-ES1/SingletonToni.pdf) for a detailed description.  
+[_MxI.$ISingleton_](https://github.com/Echopraxium/mixin-interface-api/blob/master/README.md#singleton-feature).  
+Refer to [Enginyeria del Software I - Curs 2006-2007 - Singleton](http://ima.udg.edu/~sellares/EINF-ES1/SingletonToni.pdf) for a detailed description.  
 
 
 
