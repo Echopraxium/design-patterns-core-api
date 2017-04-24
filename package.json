@@ -1,0 +1,29 @@
+{
+  "name": "design-patterns-core-api",
+  "version": "0.0.1",
+  "description": "Implementation of the original (\"Gang Of Four\") Design Patterns",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Echopraxium/design-patterns-core-api.git"
+  },
+  "keywords": [
+    "Design_Patterns",
+    "Gang_Of_Four_",
+    "GoF",
+    "Interface_Class",
+    "API"
+  ],
+  "author": "Michel Kern",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Echopraxium/design-patterns-core-api/issues"
+  },
+  "homepage": "https://github.com/Echopraxium/design-patterns-core-api#readme",
+  "dependencies": {
+    "mixin-interface": "^4.7.6"
+  }
+}
