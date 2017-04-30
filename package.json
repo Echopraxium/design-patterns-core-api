@@ -1,6 +1,6 @@
 {
   "name": "design-patterns-core-api",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Implementation of the original (\"Gang Of Four\") Design Patterns",
   "main": "test.js",
   "scripts": {
