@@ -23,11 +23,11 @@ class IObserver extends MxI.$Interface(IElement) {
   //             This service MAY be overridden by the implementation class
   // Note:       Inherited from 'IElement'
   
-  // ---- 'notify()' service ----
+  // ---- 'update()' service ----
   // FALLBACK IMPLEMENTATION
-  notify(...args) {
+  update(...args) {
     MxI.$raiseNotImplementedError(IObserver, this);
-  } // IObserver.notify()
+  } // IObserver.update()
 } // 'IObserver' interface class
 MxI.$setAsInterface(IObserver).$asChildOf(IElement);
 exports.IObserver = IObserver;

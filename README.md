@@ -10,12 +10,11 @@ Implementation of the 23 original ("Gang Of Four") [_Design Patterns_](https://e
 * **Craft a proposal for each pattern:** there are many references about _Design Patterns_. My proposals should be not be taken as reference but more as an ongoing work (for which your feedback is welcome). Thus I advise you to study by yourself the references (I have gathered some of them in the _References_ paragraph) to check it they fits your learning curve and your own design issues.
 * **Resolve name conflicts across patterns:** in the references, it happens that participant names (and operation names as well) are shared across patterns. In my proposals, I resolved these name conflicts either by mining in the references or by adding parent interface classes (e.g. _IElement_, _IAction, _ICoreComponent_...).
 
-### Changelog for Release 0.1.0
-* Package extraction: original ("Gang of Four") patterns extracted from [design-patterns-api](https://www.npmjs.com/package/design-patterns-api) in order to leave room for further patterns (e.g. _Null Object_, _Multiton_, _Service Location_, _Intercepting Filter_...)
-* New pattern released: _Proxy_
-* Design Issue: name 'Subject' for a participant is used both in 'Observer' and Proxy' patterns.
-* Design Fix: rename 'Subject' in 'Observer pattern' to 'Observable' thus releasing 'Subject' name for 'Proxy' pattern. 'ISubject' also becomes superclass of 'IAdapter'
-* Minor documentation fix: link to documentation link in 'Singleton' pattern.
+### Changelog for Release 0.1.1
+* Documentation upgrade: UML class diagram for the 'Observer' pattern
+* Design Issue: in 'Observer' pattern, operation names for 'IObserver' and 'IObservable' are clumsy and error prone.
+* Design Fix: rename of 'notify()' to 'update()' in 'IObserver', renames in 'IObserver' ('registerObserver()' replaced by 'attach()', 'unregisterObserver()' replaced by 'detach()' and 'notifyObservers' replaced by 'notify()'
+* Minor documentation fix: fix of 'IElement' broken link in 'IVisitor' pattern.  
 
 ### Roadmap
 * UML class diagrams and implementation sample for each pattern
@@ -53,7 +52,8 @@ Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Singleton](h
 
 ### Observer
 Interface classes: [_IObserver_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_observer.js) and [_IObservable_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_observable.js).  
-Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Observer](http://ima.udg.edu/~sellares/EINF-ES1/ObserverToni.pdf).    
+Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Observer](http://ima.udg.edu/~sellares/EINF-ES1/ObserverToni.pdf).  
+![alt text](img/Observer.png "UML Class diagram")  
 
 ### Iterator
 Interface classes: [_IIterator_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_iterator.js), [_ICollection_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_collection.js).  
@@ -68,7 +68,7 @@ Interface classes: [_IHandler_](https://github.com/Echopraxium/design-patterns-c
 Detailed description: [OOODesign - Chain of Responsability](http://www.oodesign.com/chain-of-responsibility-pattern.html).  
 
 ### Visitor
-Interface classes: [_IVisitor_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_visitor.js), [_IElement_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_element.js).  
+Interface classes: [_IVisitor_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/behavioral/i_visitor.js), [_IElement_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/creational/i_element.js).  
 Detailed description: [Tutorials Point - Design Patterns: Visitor pattern](https://www.tutorialspoint.com/design_pattern/visitor_pattern.htm).  
 
 ### Memento
@@ -113,7 +113,7 @@ Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Decorator](h
 Interface classes: [_IComponent_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_component.js), [_IComposite_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_decorator.js), [_ILeaf_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_leaf.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Composite](http://ima.udg.edu/~sellares/EINF-ES1/CompositeToni.pdf). 
 
-### Proxy (new)
+### Proxy
 Interface classes: [_ISubject_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_subject.js), [_IProxy_](https://github.com/Echopraxium/design-patterns-core-api/blob/master/src/structural/i_proxy.js).  
 Detailed description: [Enginyeria del Software I - Curs 2006-2007 - Proxy](http://ima.udg.edu/~sellares/EINF-ES1/ProxyToni.pdf).   
 

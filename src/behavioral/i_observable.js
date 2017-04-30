@@ -24,28 +24,28 @@ class IObservable extends MxI.$Interface(IElement) {
   //             This service MAY be overridden by the implementation class
   // Note:       Inherited from 'IElement'
   
-  // ---- 'registerObserver()' service ----
+  // ---- 'attach()' service ----
   // FALLBACK IMPLEMENTATION
   // state_ids: array of keys (e.g. a String, Integer, Uuid or Enumeration).
   //            Thus the Observable only notifies the observers which
   //            have 'subscribed' to a given subset of the state
   //            changes which may occur in the Observable. 
-  registerObserver(arg_observer, state_ids) {
+  attach(arg_observer, state_ids) {
     MxI.$raiseNotImplementedError(IObservable, this);
-  } // IObservable.registerObserver()
+  } // IObservable.attach()
   
-  // ---- 'unregisterObserver()' service ----
+  // ---- 'detach()' service ----
   // FALLBACK IMPLEMENTATION
   // arg_observer: an object which implements 'IObserver'
-  unregisterObserver(arg_observer) {
+  detach(arg_observer) {
     MxI.$raiseNotImplementedError(IObservable, this);
-  } // IObservable.unregisterObserver()
+  } // IObservable.detach()
   
-  // ---- 'notifyObservers()' service ----
+  // ---- 'notify()' service ----
   // FALLBACK IMPLEMENTATION
-  notifyObservers(...args) {
+  notify(...args) {
     MxI.$raiseNotImplementedError(IObservable, this);
-  } // IObservable.notifyObservers()
+  } // IObservable.notify()
 } // 'IObservable' interface class
 MxI.$setAsInterface(IObservable).$asChildOf(IElement);
 exports.IObservable = IObservable;
