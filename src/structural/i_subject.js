@@ -1,7 +1,7 @@
 //==============================================================
 // i_subject.js
 // 'ISubject' interface class
-// Design Patterns:     Proxy ('Product' participant)
+// Design Patterns:     Proxy ('Element' participant)
 // Purpose:             Provides a surrogate or placeholder for another 
 //                      object to control access to it
 // Other participants:  'Proxy' (see IProxy in i_proxy.js) 
@@ -13,7 +13,7 @@
 /*jshint node: true*/
 /*jshint esversion: 6*/
 const MxI      = require('mixin-interface/src/mixin_interface.js').MxI;
-const IElement = require('../creational/i_element.js').IElement;
+const IElement = require('../i_element.js').IElement;
 
 //==================== 'ISubject' interface class ====================
 class ISubject extends MxI.$Interface(IElement) {

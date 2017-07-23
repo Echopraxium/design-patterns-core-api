@@ -17,7 +17,7 @@
 /*jshint node: true*/
 /*jshint esversion: 6*/
 const MxI      = require('mixin-interface/src/mixin_interface.js').MxI;
-const IElement = require('../creational/i_element.js').IElement;
+const IElement = require('../i_element.js').IElement;
 
 //==================== 'IColleague' interface class ====================
 class IColleague extends MxI.$Interface(IElement) {

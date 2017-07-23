@@ -1,8 +1,8 @@
 //==============================================================
 // i_element.js
 // 'IElement' base interface class
-// Purpose:           Base interface class for 'IProduct', 'IRequest', 
-//                    'IAction', 'IAbstractFactory', IObservable'...
+// Purpose:           Base interface class for 'IRequest', 'IAction',
+//                    'IAbstractFactory', IObservable'...
 //                    This interface delegates the 'getId()' service to its 
 //                    subclasses depending on their role (participant within 
 //                    its Design Pattern)
@@ -38,6 +38,13 @@ class IElement extends MxI.$Interface(MxI.$IBaseInterface) {
   getId() {
     return MxI.$Null;
   } // IElement.getId()
+  
+  // ---- 'getAttribute()' service ----
+  // FALLBACK IMPLEMENTATION
+  // attribute_id: a key (e.g. a String, Integer, Uuid or Enumeration)
+  getAttribute(attribute_id) {
+    MxI.$raiseNotImplementedError(IElement, this);
+  } // IElement.getAttribute()
 } // 'IElement' interface class
 MxI.$setAsInterface(IElement).$asChildOf(MxI.$IBaseInterface);
 exports.IElement = IElement;

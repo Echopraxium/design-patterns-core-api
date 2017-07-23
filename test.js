@@ -9,10 +9,9 @@
 /*jshint esversion: 6*/
 const MxI                 = require('mixin-interface/src/mixin_interface.js').MxI; 
 
-const IElement            = require('./src/creational/i_element.js').IElement;
+const IElement            = require('./src/i_element.js').IElement;
 const IAbstractFactory    = require('./src/creational/i_abstract_factory.js').IAbstractFactory;
 const ICreator            = require('./src/creational/i_creator.js').ICreator;
-const IProduct            = require('./src/creational/i_product.js').IProduct;
 const IBuilder            = require('./src/creational/i_builder.js').IBuilder;
 
 const IObserver           = require('./src/behavioral/i_observer.js').IObserver;

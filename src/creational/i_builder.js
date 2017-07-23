@@ -2,11 +2,11 @@
 // i_builder.js
 // 'IBuilder' interface class
 // Design Pattern:      Builder
-// Related participant: 'Product' (see 'IProduct' in i_product.js)
+// Related participant: 'Element' (see 'IElement' in i_element.js)
 // Purpose:             Separate the construction of a complex object from its
 //                      representing so that the same construction process can 
 //                      create different representations.
-// Related class:       'Product' (see IProduct in i_product.js)
+// Related class:       'Element' (see IElement in i_element.js)
 // Pattern Subgroup:    Creational
 // Reference:           http://www.mcdonaldland.info/files/designpatterns/designpatternscard.pdf
 // Project:             'design-patterns-api' npm package
@@ -15,16 +15,16 @@
 /*jshint node: true*/
 /*jshint esversion: 6*/
 const MxI      = require('mixin-interface/src/mixin_interface.js').MxI;
-const IProduct = require('./i_product.js').IProduct;
+const IElement = require('../i_element.js').IElement;
 
 //==================== 'IBuilder' interface class ====================
 class IBuilder extends MxI.$Interface(MxI.$IBaseInterface) {
-  // ---- 'getProduct()' service ----
+  // ---- 'getElement()' service ----
   // FALLBACK IMPLEMENTATION
-  // Returns an object which implements 'IProduct'
-  getProduct() {
+  // Returns an object which implements 'IElement'
+  getElement() {
     MxI.$raiseNotImplementedError(IBuilder, this);
-  } // IBuilder.getProduct()
+  } // IBuilder.getElement()
   
   // ---- 'buildPart()' service ----
   // FALLBACK IMPLEMENTATION
