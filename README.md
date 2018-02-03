@@ -10,7 +10,7 @@ Implementation of the 23 original ("Gang Of Four") [_Design Patterns_](https://e
 * **Craft a proposal for each pattern:** there are many references about _Design Patterns_. My proposals should be not be taken as reference but more as an ongoing work (for which your feedback is welcome). Thus I advise you to study by yourself the references (I have gathered some of them in the _References_ paragraph) to check it they fits your learning curve and your own design issues.
 * **Resolve name conflicts across patterns:** in the references, it happens that participant names (and operation names as well) are shared across patterns. In my proposals, I resolved these name conflicts either by mining in the references or by adding parent interface classes (e.g. _IElement_, _IAction, _ICoreComponent_...).
 
-## Release 0.1.30 changelog
+## Release 0.1.31 changelog
 * Impact of _Log feature_ refactoring (please find reference documentation [here](https://www.npmjs.com/package/mixin-interface-api)): 
   * Implementation of _Log feature_ redesigned and moved from `mixin-interface` to `mixin-interface-api`.
   * New Log API is `MxI.$Log.write()` (previously `MxI.$System.log()`) and `MxI.$Log.addSink()` (to set the target of _trace requests_).
