@@ -1,0 +1,71 @@
+============================================================
+======== Unit Test for 'mixin-interface-api' package =======
+============================================================
+1.Instance of 'Animal' created: animal_0
+'animal_0' is a 'MxI.$Object' ?    true
+'animal_0' is a 'ILifeForm' ?      true
+'animal_0' is a 'IAnimal' ?        true
+'animal_0' is a 'Animal' ?         true
+'animal_0' is a 'IMammal' ?        false
+--> Animal.live: 'animal_0'
+--> Animal.run: 'animal_0'
+----------
+2. Instance of 'Cat' created: cat_0
+'cat_0' is a 'MxI.$Object' ? true
+'cat_0' is a 'Animal' ?      true
+'cat_0' is a 'Cat' ?         true
+'cat_0' is a 'ILifeForm' ?   true
+'cat_0' is a 'IAnimal' ?     true
+'cat_0' is a 'IMammal' ?     true
+--> Animal.live: 'cat_0'
+--> Animal.run: 'cat_0'
+--> Cat.suckle: 'cat_0'
+----------
+3. Check for each type if it is an Interface class or an Implementation class
+'MxI.$Object'        is an interface ? false
+'MxI.IBaseInterface' is an interface ? true
+'ILifeForm'          is an interface ? true
+'IAnimal'            is an interface ? true
+'Animal'             is an interface ? false
+'Cat'                is an interface ? false
+'IMammal'            is an interface ? true
+----------
+4. Check if an Implementation class implements a given Interface
+'Animal'              implements 'ILifeForm' ?        true
+'Animal'              implements 'IAnimal' ?          true
+'Animal'              implements 'IMammal' ?          false
+'Cat'                 implements 'IAnimal' ?          true
+'Cat'                 implements 'IMammal' ?          true
+'MxI.$NullObject'     implements 'MxI.$INullObject' ? true
+'MxI.$NullObject'     implements 'MxI.$ISingleton' ?  true
+----------
+5. get Superclass of a type
+Superclass of 'ILifeForm' is:             $IBaseInterface
+Superclass of 'Animal' is:                $Object
+Superclass of 'IAnimal' is:               ILifeForm
+Superclass of 'Cat' is:                   Animal
+----------
+6. Check generated names for instances
+Instance of 'MxI.$Object' created:        'mxi_object_0'
+Another instance of 'Animal' created:     'animal_1'
+--> Animal.live: 'animal_1'
+--> Animal.run: 'animal_1'
+Another instance of 'Cat' created:        'cat_1'
+--> Animal.live: 'cat_1'
+--> Animal.run: 'cat_1'
+--> Cat.suckle: 'cat_1'
+----------
+7. Initialize instance
+animal_1 isInitialized():                
+animal_1 isInitialized():                
+----------
+8. 'Null Object' design pattern, check if an instance is 'MxI.NULL'
+MxI.$isNull(undefined):                   true
+MxI.$isNull(animal_1):                    false
+MxI.$isNull(MxI.NULL):                    true
+MxI.$NullObject.getSingleton():           MxI.NULL
+----------
+9. Singleton
+isSingleton(MxI.NULL):                    true
+'MxI.NULL' is a 'MxI.$ISingleton' ?       true
+======== End of Unit Test ========

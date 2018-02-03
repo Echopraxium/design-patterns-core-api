@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/Echopraxium/design-patterns-core-api#readme",
   "dependencies": {
-    "mixin-interface": "^4.7.6"
+    "mixin-interface-api": "^0.1.32"
   }
 }

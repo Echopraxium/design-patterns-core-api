@@ -1,0 +1,47 @@
+============================================================
+===== Unit Test for 'design-patterns-core-api' package =====
+============================================================
+1. Creational Patterns
+----------
+1.1. Factory Method
+----------
+1.2. Builder
+----------
+1.1. Singleton
+----------------------------------------
+2. Behavioral Patterns
+----------
+2.1. Observer
+----------
+2.2. Iterator
+----------
+2.3. State
+----------
+2.4. Chain Of Responsability
+----------
+2.5. Visitor
+----------
+2.6. Memento
+----------
+2.7. Strategy
+----------
+2.8. Command
+----------
+2.9. Mediator
+----------
+2.10. Template Method
+----------------------------------------
+3. Structural Patterns
+----------
+3.1. Bridge
+----------
+3.2. Adapter
+----------
+3.3. Facade
+----------
+3.4. Decorator
+----------
+3.5. Composite
+----------
+3.6. Proxy
+===================== End of Unit Test =====================

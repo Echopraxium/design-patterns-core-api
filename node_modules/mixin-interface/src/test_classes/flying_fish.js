@@ -24,19 +24,19 @@ class FlyingFish extends MxI.$Implementation(Animal).$with(IBird, IFish) {
   } // 'FlyingFish' constructor
 
   fly() {
-    MxI.$System.log('--> FlyingFish.fly');
+    MxI.$Log.write("--> FlyingFish.fly: '%s'", this);
   } // IBird.fly()
 
   swim() {
-    MxI.$System.log('--> FlyingFish.swim');
+    MxI.$Log.write("--> FlyingFish.swim '%s'", this);
   } // IFish.swim()
 
   __run() {
-    MxI.$System.log('--> FlyingFish.run');
+    MxI.$Log.write("--> FlyingFish.run '%s'", this);
   } // IAnimal.run()
 
   __live() {
-    MxI.$System.log('--> FlyingFish.live');
+    MxI.$Log.write("--> FlyingFish.live '%s'", this);
   } // ILifeForm.live()
 } // 'FlyingFish' class
 MxI.$setClass(FlyingFish).$asImplementationOf(IBird, IFish);

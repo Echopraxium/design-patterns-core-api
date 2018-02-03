@@ -1,0 +1,67 @@
+============================================================
+========== Unit Test for 'mixin-interface' package =========
+============================================================
+1.Instance of 'Animal' created: animal_0
+'animal_0' is a 'Animal' ?           true
+'animal_0' is a 'IAnimal' ?          true
+--> Animal.run: 'animal_0'
+--> Animal.live: 'animal_0'
+----------------------------------
+2. Instance of 'Cat' created: cat_0
+'cat_0' is a 'Animal' ?      true
+'cat_0' is a 'Cat' ?         true
+'cat_0' is a 'IAnimal' ?     true
+'cat_0' is a 'IMammal' ?     true
+--> Animal.run: 'cat_0'
+--> Cat.suckle: 'cat_0'
+--> Animal.live: 'cat_0'
+----------------------------------
+3. Check if a type is an Interface class or an Implementation class
+'IBird'               is an interface ?         true
+'IFish'               is an interface ?         true
+----------------------------------
+4. Check if an Implementation class implements a given Interface
+'FlyingFish'          implements 'IBird' ?      true
+'FlyingFish'          implements 'IFish' ?      true
+----------------------------------
+5. get Superclass of a type
+Superclass of 'ILifeForm' is:			$IBaseInterface
+Superclass of 'Animal' is:			$Object
+Superclass of 'IAnimal' is:			ILifeForm
+Superclass of 'Cat' is:				Animal
+----------------------------------
+6. Instance of 'Cat' created: cat_1
+'cat_1' is a 'ILifeForm' ?			true
+'cat_1' is a 'IAnimal' ?			true
+'cat_1' is a 'IMammal' ?			true
+--> Animal.run: 'cat_1'
+--> Cat.suckle: 'cat_1'
+--> Animal.live: 'cat_1'
+----------------------------------
+7. Instance of 'FlyingFish' created: flying_fish_0
+'flying_fish_0' is a 'Animal' ?			true
+'flying_fish_0' is a 'FlyingFish' ?		true
+'flying_fish_0' is a 'IAnimal' ?		true
+'flying_fish_0' is a 'IBird' ?			true
+'flying_fish_0' is a 'IFish' ?			true
+--> FlyingFish.fly: 'flying_fish_0'
+--> FlyingFish.swim 'flying_fish_0'
+--> Animal.run: 'flying_fish_0'
+--> Animal.live: 'flying_fish_0'
+----------------------------------
+8. Check generated names for instances
+Another instance of 'Cat' created:              'cat_2'
+Another instance of 'Animal' created:           'animal_1'
+----------------------------------
+9. Change Logger
+Logger changed to 'StarPrefixLogger'
+Logger changed to 'ArrowPrefixLogger'
+----------------------------------
+10. 'Null Object' feature, check if input value is 'MxI.NULL' or 'undefined'
+MxI.$isNull(undefined):                         true
+MxI.$isNull(MxI.NULL):                          true
+----------------------------------
+11. Singleton feature
+isSingleton(MxI.NULL):                          true
+'MxI.NULL' is a 'MxI.$ISingleton' ?             true
+===================== End of Unit Test =====================

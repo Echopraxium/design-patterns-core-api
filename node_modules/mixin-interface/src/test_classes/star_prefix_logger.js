@@ -1,7 +1,7 @@
 //==============================================================
 // star_prefix_logger.js
 // Purpose: '$StarPrefixLogger' implementation class
-//          implements 'MxI.$ILogger' interface
+//          implements 'MxI.$ILogSink' interface
 // Project: 'mixin-interface' npm package
 //==============================================================
 'use strict';
@@ -10,12 +10,11 @@
 const MxI = require('../mixin_interface.js').MxI;
 
 //============ 'StarPrefixLogger' implementation class ============
-class StarPrefixLogger extends MxI.$Implementation(MxI.$DefaultLogger).$with(MxI.$ILogger, MxI.$ISingleton) {
+class StarPrefixLogger extends MxI.$Implementation(MxI.$ConsoleLogSink).$with(MxI.$ILogSink) {
   constructor(...args) {
 	  super();
       this._$prefix = "* ";
   } // 'StarPrefixLogger' constructor
 } // 'StarPrefixLogger' class
-MxI.$setClass(StarPrefixLogger).$asImplementationOf(MxI.$ILogger, MxI.$ISingleton);
-MxI.$setAsSingleton(StarPrefixLogger);
+MxI.$setClass(StarPrefixLogger).$asImplementationOf(MxI.$ILogSink);
 exports.StarPrefixLogger = StarPrefixLogger;

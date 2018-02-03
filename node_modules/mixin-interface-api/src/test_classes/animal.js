@@ -15,13 +15,13 @@ class Animal extends MxI.$Implementation(MxI.$Object).$with(IAnimal) {
   constructor() {
     super();
   } // 'Animal' constructor
-
+  
   run() {
-    console.log("--> Animal.run");
+    MxI.$Log.write("--> Animal.run: '%s'", this);
   } // IAnimal.run()
 
   live() {
-    console.log("--> Animal.live");
+    MxI.$Log.write("--> Animal.live: '%s'", this);
   } // ILifeForm.live()
 } // 'Animal' class
 MxI.$setClass(Animal).$asImplementationOf(IAnimal, ILifeForm);

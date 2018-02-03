@@ -16,7 +16,7 @@
 'use strict';
 /*jshint node: true*/
 /*jshint esversion: 6*/
-const MxI          = require('mixin-interface/src/mixin_interface.js').MxI;
+const MxI          = require('mixin-interface-api/src/mixin_interface_api.js').MxI;
 const ICoreHandler = require('./i_core_handler.js').ICoreHandler;
 
 //==================== 'IHandler' interface class ====================
