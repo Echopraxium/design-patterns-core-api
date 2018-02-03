@@ -10,7 +10,7 @@ Implementation of the 23 original ("Gang Of Four") [_Design Patterns_](https://e
 * **Craft a proposal for each pattern:** there are many references about _Design Patterns_. My proposals should be not be taken as reference but more as an ongoing work (for which your feedback is welcome). Thus I advise you to study by yourself the references (I have gathered some of them in the _References_ paragraph) to check it they fits your learning curve and your own design issues.
 * **Resolve name conflicts across patterns:** in the references, it happens that participant names (and operation names as well) are shared across patterns. In my proposals, I resolved these name conflicts either by mining in the references or by adding parent interface classes (e.g. _IElement_, _IAction, _ICoreComponent_...).
 
-## Release 0.1.32 changelog
+## Release 0.1.33 changelog
 * Impact of _Log feature_ refactoring (please find reference documentation [here](https://www.npmjs.com/package/mixin-interface-api)): 
   * Implementation of _Log feature_ redesigned and moved from `mixin-interface` to `mixin-interface-api`.
   * New Log API is `MxI.$Log.write()` (previously `MxI.$System.log()`) and `MxI.$Log.addSink()` (to set the target of _trace requests_).
@@ -148,7 +148,7 @@ Now enter the following command:
 node test.js
 ```
 
-You should get the following output:
+You should get this kind of output (please find [here](https://github.com/Echopraxium/design-patterns-core-api/blob/master/log.txt) the full output):
 ```
 ============================================================
 ===== Unit Test for 'design-patterns-core-api' package =====
@@ -160,42 +160,7 @@ You should get the following output:
 1.2. Builder
 ----------
 1.1. Singleton
-----------------------------------------
-2. Behavioral Patterns
-----------
-2.1. Observer
-----------
-2.2. Iterator
-----------
-2.3. State
-----------
-2.4. Chain Of Responsability
-----------
-2.5. Visitor
-----------
-2.6. Memento
-----------
-2.7. Strategy
-----------
-2.8. Command
-----------
-2.9. Mediator
-----------
-2.10. Template Method
-----------------------------------------
-3. Structural Patterns
-----------
-3.1. Bridge
-----------
-3.2. Adapter
-----------
-3.3. Facade
-----------
-3.4. Decorator
-----------
-3.5. Composite
-----------
-3.6. Proxy
+...
 ===================== End of Unit Test =====================
 ```
 
